@@ -2,4 +2,53 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to our Animal Base
+
+  // Wrapper
+  #wrapper
+
+    // USER INFO
+    #petInfo
+      h2 Pet Info
+      p
+        strong Kind:
+        |  <span id='petInfoKind'></span>
+        br
+        strong Birthday:
+        |  <span id='petInfoBirthday'></span>
+        br
+        strong Species:
+        |  <span id='petInfoSpecies'></span>
+        br
+        strong Gender:
+        |  <span id='petInfoGender'></span>
+    // /USER INFO
+
+    // USER LIST
+    h2 Pet List
+    #petList
+      table
+        thead
+          th PetId
+          th PetKind
+          th PetSpecies
+        tbody
+    // /USER LIST
+
+    // ADD USER
+    h2 Добавить животное
+    #addPet
+      fieldset
+        input#inputPetId(type='text', placeholder='Номер чипа')
+        input#inputPetName(type='text', placeholder='Кличка')
+        br
+        input#inputPetKind(type='text', placeholder='Вид')
+        input#inputPetSpecies(type='text', placeholder='Порода')
+        br
+        input#inputPetBirthday(type='text', placeholder='Дата рождения')
+        input#inputPetGender(type='text', placeholder='Пол')
+        br
+        button#btnAddPet Добавить животное
+    // /ADD USER
+
+  // /WRAPPER
